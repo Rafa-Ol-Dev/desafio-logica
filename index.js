@@ -1,4 +1,3 @@
-const prompt = require('prompt-sync')();
 
 /*
 Instruções para entrega
@@ -30,46 +29,52 @@ Ao final deve se exibir uma mensagem:
 "O Herói de nome **{nome}** está no nível de **{nivel}**"
 */
 
-const heroName = prompt("What is your hero's name? ");
-const heroXp = parseInt(prompt("How many experience points does your hero have? "));
-let heroLevel;
+console.log("# Desafio Classificador de Nível de Herói");
+console.log("Qual o nome de seu herói? ");
+const nomeDoHeroi = "Conan";
+console.log("Quantos pontos de experiência (XP) seu herói tem? ");
+const xpDoHeroi = 9000;
+
+let nivelDoHeroi;
 
 switch (true) {
-	case heroXp <= 1000:
-		heroLevel = "Ferro";
-		break;
-		
-	case heroXp > 1000 && heroXp <= 2000:
-		heroLevel = "Bronze";
-		break;
-		
-	case heroXp > 2000 && heroXp <= 5000:
-		heroLevel = "Prata";
-		break;
-		
-	case heroXp > 5000 && heroXp <= 7000:
-		heroLevel = "Ouro";
-		break;
-		
-	case heroXp > 7000 && heroXp <= 8000:
-		heroLevel = "Platina";
-		break;
-		
-	case heroXp > 8000 && heroXp <= 9000:
-		heroLevel = "Ascendente";
-		break;
-		
-	case heroXp > 9000 && heroXp <= 10000:
-		heroLevel = "Imortal";
-		break;
-		
-	case heroXp >= 10001:
-		heroLevel = "Radiante";
-		break;
-		
-	default:
-		heroLevel = "Desconhecido";
-		break;
+  case xpDoHeroi <= 1000:
+    nivelDoHeroi = "Ferro";
+    break;
+
+  case xpDoHeroi > 1000 && xpDoHeroi <= 2000:
+    nivelDoHeroi = "Bronze";
+    break;
+
+  case xpDoHeroi > 2000 && xpDoHeroi <= 5000:
+    nivelDoHeroi = "Prata";
+    break;
+
+  case xpDoHeroi > 5000 && xpDoHeroi <= 7000:
+    nivelDoHeroi = "Ouro";
+    break;
+
+  case xpDoHeroi > 7000 && xpDoHeroi <= 8000:
+    nivelDoHeroi = "Platina";
+    break;
+
+  case xpDoHeroi > 8000 && xpDoHeroi <= 9000:
+    nivelDoHeroi = "Ascendente";
+    break;
+
+  case xpDoHeroi > 9000 && xpDoHeroi <= 10000:
+    nivelDoHeroi = "Imortal";
+    break;
+
+  case xpDoHeroi >= 10001:
+    nivelDoHeroi = "Radiante";
+    break;
+
+  default:
+    nivelDoHeroi = "Desconhecido";
+    break;
 }
 
-console.log("O Herói de nome " + heroName + " está no nível " + heroLevel);
+console.log(
+  "O Herói de nome " + nomeDoHeroi + " está no nível " + nivelDoHeroi + "!"
+);
