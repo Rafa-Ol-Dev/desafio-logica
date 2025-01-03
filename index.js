@@ -76,5 +76,5 @@ switch (true) {
 }
 
 console.log(
-  "O Herói de nome " + nomeDoHeroi + " está no nível " + nivelDoHeroi + "!"
+  "\n" + " O Herói de nome " + nomeDoHeroi + " está no nível " + nivelDoHeroi + "!"
 );
